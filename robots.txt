@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ratunrahman.github.io/sitemap.xml
