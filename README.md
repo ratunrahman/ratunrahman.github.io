@@ -1,55 +1,35 @@
-# Ratun Rahman — AI & Machine Learning Research Portfolio
+# Ratun Rahman — AI/ML Research Portfolio (Updated)
 
-A standalone, responsive GitHub Pages site prepared for `https://ratunrahman.github.io/`.
+Static GitHub Pages website for **https://ratunrahman.github.io/**. This is a **complete replacement upload**, not a diff or patch.
 
-## Content
+## What is new
 
-- `index.html` — complete AI/ML-focused homepage, research, publications, experience and contact
-- `files/Ratun_AI_Resume.pdf` — downloadable AI/ML resume
-- `research/structured-generation.html` — detailed page for NeurIPS 2026 structured-generation research
-- `assets/style.css` — responsive styling
-- `assets/main.js` — mobile navigation and publication filtering
-- `assets/favicon.svg`, `assets/og-card.svg` — visual identity / link preview
-- `sitemap.xml`, `robots.txt`, `404.html`, `.nojekyll` — site support
+1. Direct AI/ML resume PDF links in both the top navigation and homepage intro.
+2. Verified paper links to publishers/DOIs for five journal papers; the NeurIPS paper has its direct arXiv link. The 2024 workshop entry retains the existing academic-site link pending a verified direct PDF URL.
+3. NeurIPS 2026 project page with benchmark numbers from the authors' public OpenReview ablation response, a readable comparison graphic and clear limitations. These results are correctly identified as an ablation, not as deployment latency tests.
+4. Dedicated published federated-LLM project page with publisher-reported communication and accuracy result.
+5. Dedicated ongoing, **under-review** interference-aware RAG research page that does not invent results or claim publication acceptance.
+6. Expanded research cards, updated sitemap, clearer portrait fallback.
 
-## Publish at the exact `ratunrahman.github.io` address
+## Publish over your existing website (no new repository)
 
-GitHub Pages reserves `NAME.github.io` for a GitHub **user or organization named `NAME`**.
+1. Open **https://github.com/ratunrahman/ratunrahman.github.io** → **Code**.
+2. Download and **extract** this ZIP. Upload **all files and folders inside** it (not the ZIP and not an enclosing folder).
+3. If you drag folders from your file browser onto GitHub's **Add file → Upload files** screen, they preserve relative paths; when asked, replace the old files at the same paths (GitHub's browser upload may not offer replacement in all workflows). If you encounter duplicate-name warnings, edit/replace the old tracked files instead, or use GitHub Desktop to sync a full folder replacement. For a straightforward browser-only update: upload **new files** first (`research/federated-llm.html`, `research/interference-aware-rag.html`), then update `index.html`, `assets/style.css`, `research/structured-generation.html`, `sitemap.xml`, and `README.md` with GitHub's inline editor or GitHub Desktop.
+4. Commit to **main**. GitHub Pages automatically rebuilds from `main` → `/ (root)`.
+5. Check homepage, nav, publication links, project pages and `files/Ratun_AI_Resume.pdf`.
 
-**Recommended: keep your personal account `Ratun11` and create a GitHub organization called `ratunrahman`.**
+## Optional: make your portrait self-contained
 
-1. While signed in to GitHub as `Ratun11`, create an organization named `ratunrahman` (if GitHub confirms the name is available). You will be the organization's owner.
-2. Create a **public** repository owned by the organization with the exact name `ratunrahman.github.io`.
-3. Upload **all contents** of this folder to the **root** of the repository, with `index.html` at the top level. Do **not** upload the containing `ratunrahman-site` directory as an extra folder.
-4. In repository **Settings → Pages → Build and deployment**, select **Deploy from a branch**, `main`, folder `/ (root)`, and save.
-5. The website should then be published at `https://ratunrahman.github.io/` after GitHub processes it. Confirm that the link opens.
+The homepage keeps the verified public source image URL `https://ratun11.github.io/images/profile.png`. It displays an RR monogram if loading fails. For fully independent hosting: download your existing photo from that URL, save it as **assets/profile.jpg**, and replace the `src` attribute of the portrait image in `index.html` with `assets/profile.jpg`. No replacement portrait was generated or assumed.
 
-Alternatively, create a *new GitHub user account* with username `ratunrahman` instead of an organization. Name availability can only be confirmed at registration time.
+## Editorial notes
 
-## Notes before sharing with recruiters
-
-- The portrait currently loads from `https://ratun11.github.io/images/profile.png`. The site has an `RR` fallback. To make it self-contained, download your own profile image and save it as `assets/profile.png`, then change `src` in `index.html` to `assets/profile.png`.
-- The **AI/ML Resume (PDF)** link points to `files/Ratun_AI_Resume.pdf`, already included in this ZIP. Update the PDF whenever your resume changes.
-- The four secondary research cards are paper-based portfolio entries, not claims that separate public code repositories exist.
-- Some publications link to your existing full publication list because stable DOI links were not confirmed. Replace with the definitive DOI / publisher URL when available.
-- Ongoing research is deliberately described without claiming publication acceptance.
-- The design uses Google Fonts as an enhancement; system fallbacks are provided.
-
-## Local preview
-
-Open `index.html` in your browser or serve this directory with:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000/`.
-
-## Sources consulted
-
-- https://ratun11.github.io/
-- https://ratun11.github.io/publications/
-- https://ratun11.github.io/research/
-- https://ratun11.github.io/experience/
-- https://arxiv.org/abs/2610.31681
-- https://docs.github.com/en/pages/quickstart
+- NeurIPS 2026 source: https://arxiv.org/abs/2610.31681 and https://openreview.net/forum?id=Uo6FQhB7p7 (author response for graph + single-reference ablation). Model/page numbers are reported as exact match (EM, %) and improvements as percentage points.
+- Published LLM fine-tuning result: DOI https://doi.org/10.1109/LCOMM.2025.3621354 (>90% communication-volume reduction, within 1% of centralized baseline accuracy on the reported tasks).
+- Published Meta-BayFL: https://doi.org/10.1109/TETCI.2026.3683744
+- Multimodal air quality: https://doi.org/10.1109/LGRS.2025.3573214
+- Smart-meter forecast: https://doi.org/10.1109/JIOT.2025.3586115
+- Modulation recognition: https://doi.org/10.1109/TVT.2024.3447569
+- RAG manuscript described as ongoing / under review; no unsupported performance metrics, public repository or publication claims.
+- Existing `files/Ratun_AI_Resume.pdf` is included unchanged. Replace later as your resume evolves.
